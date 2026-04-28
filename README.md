@@ -1,2 +1,2 @@
 # curriculumvitae
-Curriculum Vitae /kəˌrik(y)ələm ˈvēˌtī/
+Curriculum Vitae      /kəˌrik(y)ələm ˈvēˌtī/
