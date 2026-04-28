@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae | Jaime Luciano</title>
+    <title>Jaime V. Luciano | Curriculum Vitae</title>
     <style>
         :root {
-            --primary: #0284c7;
+            --primary-accent: #0284c7;
             --text-main: #f8fafc;
-            --text-dim: #94a3b8;
+            --text-dim: #cbd5e1;
+            --bg-glass: rgba(15, 23, 42, 0.90);
         }
 
         body {
@@ -16,98 +17,150 @@
             padding: 40px 20px;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
             color: var(--text-main);
-            /* Applying the requested tech background */
-            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('0008069a050ade9ecf214d6ddd18021d.jpg');
+            /* Technical Background */
+            background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('0008069a050ade9ecf214d6ddd18021d.jpg');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
             line-height: 1.6;
         }
 
-        .resume-container {
-            max-width: 900px;
+        .cv-container {
+            max-width: 950px;
             margin: 0 auto;
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(12px);
+            background: var(--bg-glass);
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
+            border-radius: 8px;
             padding: 60px;
             box-shadow: 0 25px 50px rgba(0,0,0,0.5);
         }
 
-        .header {
-            text-align: center;
-            border-bottom: 2px solid var(--primary);
+        header {
+            border-bottom: 2px solid var(--primary-accent);
             padding-bottom: 20px;
             margin-bottom: 40px;
+            text-align: center;
         }
 
-        h1 { font-size: 2.8rem; margin: 0 0 10px 0; letter-spacing: 1px; }
-        .subtitle { font-size: 1.2rem; color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
-        .contact { font-size: 0.95rem; color: var(--text-dim); margin-top: 15px; }
+        h1 { font-size: 2.8rem; margin: 0 0 5px 0; letter-spacing: 1px; }
+        .subtitle { font-size: 1.2rem; color: var(--primary-accent); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
+        .contact-info { font-size: 0.95rem; color: var(--text-dim); margin-top: 15px; }
 
-        h2 { font-size: 1.5rem; color: #fff; margin-top: 40px; border-left: 4px solid var(--primary); padding-left: 15px; }
+        h2 { 
+            font-size: 1.5rem; 
+            color: #fff; 
+            margin-top: 40px; 
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary-accent); 
+            padding-left: 15px; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-        .job { margin-bottom: 30px; }
-        .job-title { font-size: 1.2rem; font-weight: 700; color: var(--primary); margin-bottom: 5px; }
-        .job-meta { font-size: 0.95rem; color: var(--text-dim); margin-bottom: 15px; font-style: italic; }
+        .job-entry { margin-bottom: 35px; }
+        .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px; flex-wrap: wrap; }
+        .job-title { font-size: 1.25rem; font-weight: 700; color: var(--primary-accent); }
+        .job-company { font-size: 1.1rem; font-weight: 600; color: #fff; }
+        .job-date { font-size: 0.95rem; color: var(--text-dim); font-style: italic; }
+
+        ul.bullets { padding-left: 20px; margin-top: 10px; }
+        ul.bullets li { margin-bottom: 12px; color: var(--text-dim); text-align: justify; }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
         
-        ul.bullets { padding-left: 20px; }
-        ul.bullets li { margin-bottom: 10px; color: #cbd5e1; }
-
-        .skills-container { display: flex; flex-wrap: wrap; gap: 10px; }
-        .skill-tag { background: rgba(2, 132, 199, 0.15); border: 1px solid var(--primary); color: #fff; padding: 6px 12px; border-radius: 4px; font-size: 0.85rem; }
+        .skill-category { background: rgba(255,255,255,0.03); padding: 15px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); }
+        .skill-title { font-weight: 600; color: var(--primary-accent); margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px;}
+        .skill-list { font-size: 0.9rem; color: var(--text-dim); }
 
         @media (max-width: 768px) {
-            .resume-container { padding: 30px; }
-            h1 { font-size: 2rem; }
+            .cv-container { padding: 30px; }
+            .job-header { flex-direction: column; }
         }
     </style>
 </head>
 <body>
 
-    <div class="resume-container">
-        <header class="header">
+    <div class="cv-container">
+        
+        <header>
             <h1>JAIME V. LUCIANO</h1>
             <div class="subtitle">Multi-Cloud Network Solutions Architect</div>
-            <div class="contact">
-                DMV Area (Northern VA) | Jaime.luciano@icloud.com | AWS SAP & ANS Certified
+            <div class="contact-info">
+                DMV: District of Columbia, Maryland and Northern Virginia<br>
+                Jaime.luciano@icloud.com | linkedin.com/in/jaime-luciano-71113b86
             </div>
         </header>
 
         <section>
             <h2>Synopsis</h2>
-            <p style="color: #cbd5e1; text-align: justify;">
-                System Architect with 30+ years of experience across private and public sectors. Specialized in the design, configuration, and maintenance of innovative IT infrastructure solutions. A recognized subject matter expert (SME) in Azure and AWS hybrid environments, adept at transforming inefficient operations into secure, scalable, and highly profitable business solutions through strict adherence to the Well-Architected Framework and Zero-Trust principles.
+            <p style="color: var(--text-dim); text-align: justify; font-size: 1.05rem;">
+                System Architect with 30+ years of experience across both private and public sectors. Specialized in the design, configuration, and maintenance of innovative IT infrastructure solutions—from concept through implementation. Deep expertise in Azure and AWS cloud services with a proven track record of success in secure cloud and hybrid environments. Recognized subject matter expert (SME), adept at transforming inefficient operations into profitable, scalable business solutions utilizing Infrastructure as Code, NetDevOps, and Zero-Trust methodologies.
             </p>
         </section>
 
         <section>
             <h2>Professional Experience</h2>
             
-            <div class="job">
-                <div class="job-title">Multi-Cloud Network Solutions Architect</div>
-                <div class="job-meta">ANG Signal | Silver Spring, MD | Nov 2024 - Present</div>
+            <div class="job-entry">
+                <div class="job-header">
+                    <div class="job-title">Multi-Cloud Network Solutions Architect</div>
+                    <div class="job-date">Nov 2024 - April 2026</div>
+                </div>
+                <div class="job-company">ANG Signal | Silver Spring, MD</div>
                 <ul class="bullets">
-                    <li>Architected a 10Gb AWS Direct Connect for a multi‑account landing zone serving U.S. government agencies.</li>
-                    <li>Championed NetDevOps using Terraform, CloudFormation, and Bicep to automate auditable deployments.</li>
+                    <li>Designed and architected a 10 Gb AWS Direct Connect for a multi‑account landing zone serving U.S. government agencies, ensuring alignment with the AWS Cloud Adoption Framework.</li>
+                    <li>Led AWS Cloud Assessments for the Web Operations Center, producing Minimum Viable Product (MVP) and Minimum Viable Architecture (MVA).</li>
+                    <li>Championed NetDevOps and Infrastructure as Code adoption, authoring CloudFormation templates, Terraform modules, and Bicep templates to automate deployments.</li>
                     <li>Designed Azure hub-and-spoke network topologies with VNet peering, custom routing, and ExpressRoute integration.</li>
-                    <li>Managed global IP address space (IPv4/IPv6) to ensure conflict-free routing across Direct Connect boundaries.</li>
+                    <li>Built FinOps and cloud intelligence dashboards to drive cost transparency and budget optimization across multi-cloud environments.</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <div class="job-title">Senior Cloud Architect / Engineer</div>
+                    <div class="job-date">Prior Experience</div>
+                </div>
+                <div class="job-company">Enterprise, Federal & DoD Contracting</div>
+                <ul class="bullets">
+                    <li>Directed end-to-end cloud migration and datacenter exit initiatives for production applications using AWS MGN.</li>
+                    <li>Managed global IP address space (IPv4/IPv6) across boundaries, ensuring conflict-free routing integrity.</li>
+                    <li>Architected cross-cloud identity and access management through Entra ID, unifying MFA, Azure RBAC, and AWS IAM Identity Center.</li>
+                    <li>Implemented VMware NSX-T microsegmentation and zero-trust network security aligned with NIST Cybersecurity Framework (CSF) 2.0.</li>
                 </ul>
             </div>
         </section>
 
         <section>
-            <h2>Core Competencies</h2>
-            <div class="skills-container">
-                <span class="skill-tag">AWS Direct Connect</span>
-                <span class="skill-tag">Azure ExpressRoute</span>
-                <span class="skill-tag">Terraform / IaC</span>
-                <span class="skill-tag">Hub-and-Spoke</span>
-                <span class="skill-tag">FinOps / KQL</span>
-                <span class="skill-tag">VMware NSX-T</span>
-                <span class="skill-tag">Zero-Trust Security</span>
-                <span class="skill-tag">Entra ID IAM</span>
+            <h2>Technical Expertise</h2>
+            <div class="skills-grid">
+                
+                <div class="skill-category">
+                    <div class="skill-title">Cloud Networking</div>
+                    <div class="skill-list">VPC, Route 53, TGW, ELB, VPN, Cloudfront, AWS Direct Connect, Azure ExpressRoute, Hub-and-Spoke.</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-title">Security & Identity</div>
+                    <div class="skill-list">Entra ID, IAM, Secret Manager, AWS WAF, VMware NSX-T Microsegmentation, Palo Alto, Illumio, NIST CSF 2.0.</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-title">Automation & IaC</div>
+                    <div class="skill-list">Terraform, CloudFormation, Bicep / ARM, Linux Shell Scripting, Azure DevOps, CI/CD Pipelines, Python.</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-title">Storage & Databases</div>
+                    <div class="skill-list">Amazon FSx (Windows/NetApp ONTAP), S3, EFS, EBS, Amazon RDS, Azure SQL, VMware vSAN.</div>
+                </div>
+
             </div>
         </section>
 
@@ -118,8 +171,11 @@
                 <li>AWS Certified Advanced Networking — Specialty (ANS-C01)</li>
                 <li>FinOps Certified Practitioner</li>
                 <li>VMware Certified Professional 6 — Data Center Virtualization (VCP6-DCV)</li>
+                <li>VMware Certified Professional 5 — Data Center Virtualization (VCP5-DCV)</li>
+                <li>CompTIA Security+</li>
             </ul>
         </section>
+
     </div>
 
 </body>
