@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaime Luciano | Multi-Cloud Solutions Architect</title>
+    <style>
+        :root {
+            --primary-color: #0ea5e9; /* Light Blue */
+            --bg-overlay: rgba(15, 23, 42, 0.85); /* Dark slate glass */
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-main);
+            background-image: url('Dna Nano Tech Wallpaper HD.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Glassmorphism Panel Style */
+        .glass-panel {
+            background: var(--bg-overlay);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+        }
+        
+        .logo {
+            max-width: 120px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0px 0px 8px rgba(14, 165, 233, 0.8));
+        }
+
+        h1.name {
+            font-size: 3.5rem;
+            margin: 0;
+            letter-spacing: 2px;
+            font-weight: 300;
+        }
+
+        .pronunciation {
+            display: block;
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            margin-top: 10px;
+            letter-spacing: 1px;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Profile Tabs */
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--primary-color);
+            color: var(--text-main);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        .profile-content {
+            display: none;
+            font-size: 1.1rem;
+            font-weight: 300;
+            text-align: justify;
+        }
+
+        .profile-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        /* Resume Sections */
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+            color: var(--text-muted);
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-item {
+            background: rgba(255,255,255,0.05);
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary-color);
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 50px;
+            font-size: 0.9rem;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            h1.name { font-size: 2.5rem; }
+            .pronunciation { font-size: 0.75rem; }
+            .glass-panel { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header class="glass-panel">
+            <img src="Microsoft_Cortana_transparent.svg.png" alt="Cortana Logo" class="logo">
+            <h1 class="name">Jaime Luciano</h1>
+            <span class="pronunciation">
+                /ˈxaime luˈsjano/ (Castilian) &nbsp;|&nbsp; 
+                /ˈhaɪmeɪ ˌluːsiˈɑːnoʊ/ (English) &nbsp;|&nbsp; 
+                /ˈdʒajme luˈtʃano/ (Italiano) &nbsp;|&nbsp; 
+                /ˈʒajmi luˈsjɐnu/ (Português)
+            </span>
+            <div class="title">Multi-Cloud Network Solutions Architect</div>
+        </header>
+
+        <section class="glass-panel">
+            <h2>About</h2>
+            
+            <div class="tab-container">
+                <button class="tab-btn active" onclick="openTab(event, 'prof1')">Profile 1: The Visionary</button>
+                <button class="tab-btn" onclick="openTab(event, 'prof2')">Profile 2: The Artisan</button>
+                <button class="tab-btn" onclick="openTab(event, 'prof3')">Profile 3: The Bold</button>
+            </div>
+
+            <div id="prof1" class="profile-content active">
+                Blending the precision of an engineer with the vision of an artist, my approach to cloud architecture is rooted in craftsmanship. Whether designing intricate Hub-and-Spoke multi-cloud networks or optimizing enterprise infrastructure, perfection lies in the smallest details. Beyond the terminal, a deep passion for art, music, and design heavily influences my technical work, ensuring every solution is not just functional, but elegant. A fearless pursuit of the extraordinary drives everything I do—a mindset forged through extreme sports like paragliding, snowboarding, and completing the IRONMAN triathlon. I build robust, futuristic, and versatile infrastructures with the exact same endurance, discipline, and lack of fear.
+            </div>
+
+            <div id="prof2" class="profile-content">
+                Cloud architecture is a modern art form. As a versatile and futuristic system architect, the goal is always to design IT infrastructure that is as elegant as it is resilient. This methodology relies on a deep appreciation for craftsmanship, recognizing that the hardest accomplishments often hinge on the smallest, easily overlooked details. That same drive for perfection and high-performance execution extends far beyond the data center. Conquering extreme challenges—from freestyle ice skating and surfing to crossing the finish line of an IRONMAN triathlon—has cultivated a mindset completely devoid of fear. Complex multi-cloud federations and massive digital transformations are simply the next grand challenge to conquer.
+            </div>
+
+            <div id="prof3" class="profile-content">
+                Dreamer. Visionary. Architect. There is a distinct rhythm to building scalable, zero-trust cloud environments, and my work operates at the intersection of deep technical expertise and creative design. Perfection is in the details, and I treat complex infrastructure-as-code deployments with the same care a craftsman gives to a masterpiece. Fear doesn't factor into the equation. My energy comes from pushing limits, whether that means carving down a mountain on a snowboard, paragliding, or grinding through an IRONMAN triathlon. That exact same relentless energy, versatility, and passion for the extraordinary is what I bring to enterprise cloud strategy and digital transformation.
+            </div>
+        </section>
+
+        <section class="glass-panel">
+            <h2>Career Highlights</h2>
+            
+            <h3>Hybrid & Multi-Cloud Connectivity</h3>
+            <ul>
+                <li>Architected 10Gb AWS Direct Connect circuits and Azure hub-and-spoke topologies, engineering seamless cross-cloud federation via IPsec VPN and BGP integration for zero-latency, secure enterprise connectivity.</li>
+                <li>Managed global IPv4/IPv6 address spaces across Direct Connect and ExpressRoute boundaries to prevent routing conflicts and ensure segmentation integrity.</li>
+            </ul>
+
+            <h3>Cloud Migration & Transformation</h3>
+            <ul>
+                <li>Steered end-to-end datacenter exits and digital transformations using Agile delivery (MVP/MVA, Day 0/1/2).</li>
+                <li>Successfully piloted and lifecycle-managed VMware Cloud on AWS (VMC) initiatives, including SDDC deployment, HCX, and NSX-T overlay networking.</li>
+            </ul>
+
+            <h3>Infrastructure as Code (IaC) & Automation</h3>
+            <ul>
+                <li>Championed NetDevOps by authoring highly auditable CloudFormation, Terraform, and Bicep/ARM templates, automating Transit Gateway orchestration at scale.</li>
+                <li>Built robust CI/CD pipelines leveraging AWS Developer Tools and Azure DevOps to provision automated, repeatable infrastructure.</li>
+            </ul>
+
+            <h3>Identity, Security & Governance</h3>
+            <ul>
+                <li>Unified cross-cloud IAM through Entra ID, Azure RBAC, and AWS IAM Identity Center.</li>
+                <li>Pioneered a FISMA-compliant, multi-factor authentication environment, embedding NSX-T microsegmentation and NIST CSF 2.0 standards across hybrid ecosystems.</li>
+            </ul>
+
+            <h3>FinOps & Observability</h3>
+            <ul>
+                <li>Built advanced cloud intelligence dashboards using KQL and Log Analytics, driving sweeping cost optimizations, capacity planning, and usage accountability.</li>
+                <li>Architected VMware vRealize Operations (Aria) solutions to govern cloud services performance and showback.</li>
+            </ul>
+        </section>
+
+        <section class="glass-panel">
+            <h2>Core Competencies</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Azure & AWS Architecture</div>
+                <div class="skill-item">Hub-and-Spoke Networking</div>
+                <div class="skill-item">Direct Connect / ExpressRoute</div>
+                <div class="skill-item">Terraform / Bicep / IaC</div>
+                <div class="skill-item">Zero-Trust / NIST CSF 2.0</div>
+                <div class="skill-item">KQL & Log Analytics</div>
+                <div class="skill-item">VMware NSX-T & Virtualization</div>
+                <div class="skill-item">FinOps & Cost Optimization</div>
+            </div>
+        </section>
+
+        <section class="glass-panel">
+            <h2>Certifications</h2>
+            <ul>
+                <li>AWS Certified Solutions Architect — Professional (SAP)</li>
+                <li>AWS Certified Advanced Networking — Specialty (ANS)</li>
+                <li>FinOps Certified Practitioner</li>
+                <li>VMware Certified Professional 5 & 6 — Data Center Virtualization (VCP-DCV)</li>
+                <li>CompTIA Security+</li>
+                <li>Microsoft Certified Systems Engineer (MCSE)</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>Northern Virginia (DMV) | <a href="https://linkedin.com/in/jaime-luciano-71113b86" target="_blank">LinkedIn Profile</a></p>
+        </footer>
+
+    </div>
+
+    <script>
+        function openTab(evt, profileId) {
+            var i, tabcontent, tablinks;
+            
+            // Hide all profile content
+            tabcontent = document.getElementsByClassName("profile-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            
+            // Remove active class from all buttons
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            
+            // Show the current tab, and add an "active" class to the button
+            document.getElementById(profileId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
